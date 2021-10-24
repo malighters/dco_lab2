@@ -32,19 +32,19 @@ And check out your operating system's task list and watch how the CPU usage chan
 A sample output of different test results could look like this:
 
 ```
- 66039306384 ns  iterative of 10000 elements 
- 23809197510 ns  fork/join(p/2)  threshold=1 
- 19821643561 ns  fork/join(p/2)  threshold=10 
- 20334810171 ns  fork/join(p/2)  threshold=100 
- 17638490172 ns  fork/join(p*2)  threshold=1 
- 17736871569 ns  fork/join(p*2)  threshold=10 
- 17733648047 ns  fork/join(p*2)  threshold=100 
- 19304104130 ns  fork/join(p-1)  threshold=1 
- 18438954936 ns  fork/join(p-1)  threshold=10 
- 18477653131 ns  fork/join(p-1)  threshold=100 
- 18012018090 ns  commonPool      threshold=1 
- 18124426459 ns  commonPool      threshold=10 
- 18423379476 ns  commonPool      threshold=100 
+ 68052823618 | iterative                           |  
+ 20421063992 | fork/join(p/2)  threshold=1         | steal count=7 
+ 20648060721 | fork/join(p/2)  threshold=10        | steal count=11 
+ 20073481682 | fork/join(p/2)  threshold=100       | steal count=7 
+ 18195253569 | fork/join(p*2)  threshold=1         | steal count=99 
+ 18357321220 | fork/join(p*2)  threshold=10        | steal count=65 
+ 18136547322 | fork/join(p*2)  threshold=100       | steal count=64 
+ 18453099276 | fork/join(p-1)  threshold=1         | steal count=19 
+ 18530963420 | fork/join(p-1)  threshold=10        | steal count=28 
+ 18463054894 | fork/join(p-1)  threshold=100       | steal count=20 
+ 18610048247 | commonPool      threshold=1         | steal count=24 
+ 18375081904 | commonPool      threshold=10        | steal count=44 
+ 18177679447 | commonPool      threshold=100       | steal count=43 
 ```
 
 Use your object-oriented and/or functional programming skills in Scala and see whether you can code without repeating too much code.
@@ -53,7 +53,7 @@ Of course, you could use unit tests here, but that is not required.
 
 ## Tipps and tricks
 
-- `System.nanoTime()` return the current timestamp in nanoseconds since Epoch as a `Long` value. A nanosecond is a 1/1,000,000,000 of a second.  
+- `System.nanoTime()` return the current timestamp in nanoseconds since Epoch as a `Long` value (a nanosecond is a 1/1,000,000,000 of a second)  
 - Right before you start your test, deliberately start the garbage collector with `System.gc`
 
 ## Useful resources
