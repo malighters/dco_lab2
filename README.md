@@ -1,5 +1,9 @@
 # Fork-Join Pool Lab "Performance"
 
+Hi! It's my implementation of lab unit #2 of course "Distributed Computing" at OTH Regensburg.
+
+The task is below:
+
 The class [BigFraction](https://github.com/kiprobinson/BigFraction) represents a fraction of two `BigInteger` objects. 
 This fraction is reduced to the lowest term which (for big integer values of numerator and denominator) takes some time to compute.
 For more details on `BigFraction` see [Kip Robinsons's Github Repo](https://github.com/kiprobinson/BigFraction).
